@@ -1,1 +1,10 @@
-<p>search works!</p>
+<div class="container-fluid">
+    <form  #searchForm='ngForm' class="mt-4">
+        <div class="row">
+            <div class="col-md-8">
+                <input class="form-control" type="text" class="form-control" id="name" [(ngModel)]="newUser.login" name="searchUser" placeholder="Enter name of user">
+                <button class="btn btn-success btn-md mt-2" type="submit" (click) = "searchUser()">Search</button>
+            </div>
+        </div>
+</form> 
+</div>
