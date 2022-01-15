@@ -1,1 +1,18 @@
-<p>display-user works!</p>
+<div class="container">
+
+    <div class="row">
+        <div>
+            <app-search (searchForUser)= 'searchUserName($event)'></app-search>
+        </div>
+    </div>
+    <div class="image" *ngIf = "user">
+        <img [src] ="user.avatar_url">
+    </div>
+    <div>
+        <p>Name: {{user.login}}</p>
+        <p>Followers: {{user.followers}}</p>
+        <p>Following: {{user.following}}</p>
+        <p>Date created: {{user.created_at|date}}</p>
+    </div>
+    
+</div>
