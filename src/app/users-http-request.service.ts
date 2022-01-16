@@ -27,11 +27,12 @@ export class UsersHttpRequestService {
         this.user.created_at = response!.created_at
 
       }, error=>{
-        this.user.login = "Ruweydha";
-        this.user.followers = 0;
-        this.user.following = 0;
-        this.user.avatar_url = "";
-        this.user.created_at = new Date();
+        // this.user.login = "Ruweydha";
+        // this.user.followers = 0;
+        // this.user.following = 0;
+        // this.user.avatar_url = "";
+        // this.user.created_at = new Date();
+        console.log("Page not found")
       })
 
       return promise
