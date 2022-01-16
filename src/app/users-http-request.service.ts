@@ -19,7 +19,7 @@ export class UsersHttpRequestService {
       created_at:Date
     }
     let promise: any= new Promise<void>((resolve, reject)=>{
-      this.http.get<ApiResponse>("https://api.github.com/users/" +username).toPromise().then(response =>{
+      this.http.get<ApiResponse>(environment.apiUrl +/users/ +username).toPromise().then(response =>{
         this.user.login = response!.login;
         this.user.followers = response!.followers;
         this.user.following = response!.following;
