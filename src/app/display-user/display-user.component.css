@@ -1,0 +1,14 @@
+img{
+    width: 50%;
+    height: 300px;
+}
+thead{
+    background-color: rgb(29,61,98);
+    color: white;
+    height: 70px;
+    padding: 15px;
+    font-weight: bold;
+}
+table{
+    font-size: larger;
+}
