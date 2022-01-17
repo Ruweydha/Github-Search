@@ -1,6 +1,12 @@
 img{
     width: 50%;
-    height: 300px;
+    height: 350px;
+    float: left;
+    margin: 15px;
+}
+.display{
+    display: flex;
+    justify-content: space-around;
 }
 thead{
     background-color: rgb(29,61,98);
@@ -11,4 +17,10 @@ thead{
 }
 table{
     font-size: larger;
+    clear: both;
+}
+.info{
+    display: flex;
+    justify-content: center; 
+    font-size: large;
 }
