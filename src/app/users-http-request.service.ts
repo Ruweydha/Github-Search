@@ -3,6 +3,8 @@ import { User } from './user';
 import {HttpClient} from '@angular/common/http';
 // import { resolve } from 'dns';
 import { environment } from 'src/environments/environment';
+import { Repository } from './repository';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -35,6 +37,10 @@ export class UsersHttpRequestService {
 
     })
   }
+
+  repoRequest(username:string):Observable<Repository[]>{
+    return this.http.get<Repository[]>(environment.apiUrl +/users/ + username + "/repos")
+   }
 
   constructor(private http:HttpClient) {
     this.user = new User ("", 0, 0,"",new Date())
