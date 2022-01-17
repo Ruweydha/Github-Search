@@ -6,6 +6,7 @@ import { DisplayUserComponent } from './display-user/display-user.component';
 const routes: Routes = [
   {path:'home', component:HomePageComponent},
   {path:'users',component:DisplayUserComponent},
+  {path:'', redirectTo:"/home", pathMatch:"full"}
   
 ];
 
