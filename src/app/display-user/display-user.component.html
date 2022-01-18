@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid">
 
     <div class="row">
         <div>
@@ -7,7 +7,7 @@
     </div>
     <div  *ngIf = "user" class="mt-3">
         <h2 class="text-center">User Details</h2>
-        <img [src] ="user.avatar_url">
+        <img src ="{{user.avatar_url}}">
 
         <div class="info">
             <div class="mt-5">
@@ -19,22 +19,25 @@
         </div>
     </div>
          
-            <table class="table container-fluid" *ngIf = "user"> 
-                <h2 class="text-center">Repos</h2>
-                <thead class="row">
-                    <td class="col-md-3">Name</td>
-                    <td class="col-md-3">Description</td>
-                    <td class="col-md-3">Language</td>
-                    <td class="col-md-3">Forks</td>
-                </thead>
+     <table class="table container" *ngIf = "user"> 
+         <h2 class="text-center">Repos</h2>
+         <thead class="row">
+             <td class="col-md-3">Name</td>
+             <td class="col-md-3">Description</td>
+             <td class="col-md-3">Language</td>
+             <td class="col-md-3">Forks</td>
+         </thead>
                 
-                <tr *ngFor = "let repo of repos" appHover class="row">
-                    <td class="col-md-3">{{repo.name}}</td>
-                    <td class="col-md-3">{{repo.description}}</td>
-                    <td class="col-md-3">{{repo.language}}</td>
-                    <td class="col-md-3">{{repo.forks_count}}</td>
-                </tr>
-    
-          </table>
+         <tr *ngFor = "let repo of repos" appHover class="row">
+            <td class="col-md-3">{{repo.name}}</td>
+            <td class="col-md-3">{{repo.description}}</td>
+            <td class="col-md-3">{{repo.language}}</td>
+            <td class="col-md-3">{{repo.forks_count}}</td>
+         </tr>
+    </table>
+    <div *ngIf = 'user' class="container-fluid mt-5">
+        <app-footer></app-footer>
+    </div>
     
 </div>
+
