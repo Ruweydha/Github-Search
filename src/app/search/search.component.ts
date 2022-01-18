@@ -9,13 +9,13 @@ import { User } from '../user';
 export class SearchComponent implements OnInit {
 
   constructor() { }
-  newUser = new User("",0,0,"",new Date());
+  searchedUser = new User("",0,0,"",new Date());
 
   @Output () searchForUser:EventEmitter<string> = new EventEmitter<string>();
 
   searchUser(){
-    this.searchForUser.emit(this.newUser.login)
-    this.newUser = new User("",0,0,"",new Date())
+    this.searchForUser.emit(this.searchedUser.login)
+    this.searchedUser = new User("",0,0,"",new Date())
   }
 
   ngOnInit(): void {
